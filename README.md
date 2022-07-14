@@ -21,5 +21,5 @@ ____
 - [x] Добавил файлы MyClass с первого занятия в ветку lesson-02 и сделал pull request
 - [x] В pull request добавил преподавателя в assignees и в reviewers
 
-
+</ol>
  
