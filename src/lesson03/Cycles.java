@@ -60,6 +60,5 @@ public class Cycles { // ДЗ, часть №2
         }
         System.out.println();
 
-
     }
 }

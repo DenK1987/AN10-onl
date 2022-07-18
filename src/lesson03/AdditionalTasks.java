@@ -49,6 +49,5 @@ public class AdditionalTasks { // ДЗ (необязательная часть)
             System.out.print("\n");
         }
 
-
     }
 }
