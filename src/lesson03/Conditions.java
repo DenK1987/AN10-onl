@@ -124,5 +124,6 @@ public class Conditions { // ДЗ, часть №1
         }
         System.out.println();
 
+
     }
 }
