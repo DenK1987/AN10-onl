@@ -31,8 +31,8 @@ public class AdditionalTasks { // ДЗ (необязательная часть)
         int period = sc.nextInt();
         for (int i = 1; i <= period; i++) {
             depositAmount = 1.07 * depositAmount;
-            System.out.println(depositAmount);
         }
+        System.out.println(depositAmount);
         System.out.println();
 
         // Задача 3. Напишите программу, которая выводит в консоль таблицу умножения.

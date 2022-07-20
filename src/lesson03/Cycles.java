@@ -7,14 +7,14 @@ public class Cycles { // ДЗ, часть №2
         // Задача 1. При помощи цикла for вывести на экран нечетные числа от 1 до 99. (использовать инкремент)
         for (int i = 1; i < 100; i++) {
             if (i % 2 != 0) {
-                System.out.print(i + " ");
+                System.out.printf("%d ", i);
             }
         }
         System.out.println("\n");
 
         // Задача 2. При помощи цикла for вывести на экран числа от 15 до 1. (использовать декремент)
         for (int i = 15; i >= 1; i--) {
-            System.out.print(i + " ");
+            System.out.printf("%d ", i);
         }
         System.out.println("\n");
 
@@ -26,27 +26,24 @@ public class Cycles { // ДЗ, часть №2
         int result = 0;
         for (int i = 1; i <= number; i++) {
             result += i;
-            if (i == number) {
-                System.out.println("Сумма чисел от 1 до " + number + " = " + result);
-            }
         }
+        System.out.println("Сумма чисел от 1 до " + number + " = " + result);
         System.out.println();
 
         // Задача 4. Напишите программу, которая будет выводить на экран такую последовательность: 7 14 21 28 35 42
         // 49 56 63 70 77 84 91 98. В решении использовать цикл while
-        int count = 6;
+        int count = 7;
         while (count <= 98) {
-            if (++count % 7 == 0) {
-                System.out.print(count + " ");
-            }
+            System.out.printf("%d ", count);
+            count += 7;
         }
         System.out.println("\n");
 
         // Задача 5. Вывести 10 первых чисел последовательности 0, -5, -10, -15...
-        for (int i = 0; i >= -45; i--) {
-            if (i % 5 == 0) {
-                System.out.print(i + " ");
-            }
+        int count1 = 0;
+        for (int i = 0; i < 10; i++) {
+            System.out.printf("%d, ", count1);
+            count1 -= 5;
         }
         System.out.println("\n");
 

@@ -1,6 +1,7 @@
 package lesson03;
 
 import java.util.Scanner;
+
 public class Conditions { // ДЗ, часть №1
     public static void main(String[] args) {
 
@@ -21,77 +22,97 @@ public class Conditions { // ДЗ, часть №1
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите номер месяца: ");
         int numberMonth2 = sc.nextInt();
+        String season;
+        String s = "Данный месяц соответствует поре года - ";
         switch (numberMonth2) {
             case 1, 2, 12:
-                System.out.println("Данный месяц соответствует поре года - " + "Зима");
+                season = s + "Зима";
                 break;
             case 3, 4, 5:
-                System.out.println("Данный месяц соответствует поре года - " + "Весна");
+                season = s + "Весна";
                 break;
             case 6, 7, 8:
-                System.out.println("Данный месяц соответствует поре года - " + "Лето");
+                season = s + "Лето";
                 break;
             case 9, 10, 11:
-                System.out.println("Данный месяц соответствует поре года - " + "Осень");
+                season = s + "Осень";
                 break;
             default:
-                System.out.println("Месяца с таким номером не существует");
+                season = "Данного месяца не существует";
         }
+        System.out.println(season);
         System.out.println();
 
         System.out.print("Введите номер месяца: ");
         int numberMonth3 = sc.nextInt();
+        String season2;
+        String month2;
         switch (numberMonth3) {  // Попробовал добавить на вывод еще и название месяца
             case 1:
-                System.out.println("Данный месяц - Январь, пора года - Зима");
+                month2 = "Январь";
+                season2 = "Зима";
                 break;
             case 2:
-                System.out.println("Данный месяц - Февраль, пора года - Зима");
-                break;
+                month2 = "Февраль";
+                season2 = "Зима";
             case 3:
-                System.out.println("Данный месяц - Март, пора года - Весна");
+                month2 = "Март";
+                season2 = "Весна";
                 break;
             case 4:
-                System.out.println("Данный месяц - Апрель, пора года - Весна");
+                month2 = "Апрель";
+                season2 = "Весна";
                 break;
             case 5:
-                System.out.println("Данный месяц - Май, пора года - Весна");
+                month2 = "Май";
+                season2 = "Весна";
                 break;
             case 6:
-                System.out.println("Данный месяц - Июнь, пора года - Лето");
+                month2 = "Июнь";
+                season2 = "Лето";
                 break;
             case 7:
-                System.out.println("Данный месяц - Июль, пора года - Лето");
+                month2 = "Июль";
+                season2 = "Лето";
                 break;
             case 8:
-                System.out.println("Данный месяц - Август, пора года - Лето");
+                month2 = "Август";
+                season2 = "Лето";
                 break;
             case 9:
-                System.out.println("Данный месяц - Сентябрь, пора года - Осень");
+                month2 = "Сентябрь";
+                season2 = "Осень";
                 break;
             case 10:
-                System.out.println("Данный месяц - Октябрь, пора года - Осень");
+                month2 = "Октябрь";
+                season2 = "Осень";
                 break;
             case 11:
-                System.out.println("Данный месяц - Ноябрь, пора года - Осень");
+                month2 = "Ноябрь";
+                season2 = "Осень";
                 break;
             case 12:
-                System.out.println("Данный месяц - Декабрь, пора года - Зима");
+                month2 = "Декабрь";
+                season2 = "Зима";
                 break;
             default:
-                System.out.println("Месяца с таким номером не существует");
+                month2 = "Отсутствует";
+                season2 = "Отсутствует";
         }
+        System.out.println("Данный месяц - " + month2 + ", пора года - " + season2);
         System.out.println();
 
         // Задача 2. Напишите программу, которая будет принимать на вход число (можно задать явно в коде) и на выход
         // будет выводить сообщение о четности числа.
         System.out.print("Введите число: ");
         int number = sc.nextInt();
+        String evenOdd;
         if (number % 2 == 0) {
-            System.out.println("Данное число является четным");
+            evenOdd = "Данное число является четным";
         } else {
-            System.out.println("Данное число является нечетным");
+            evenOdd = "Данное число является нечетным";
         }
+        System.out.println(evenOdd);
         System.out.println();
 
         // Задача 3. Для числа t (температура на улице) вывести:
@@ -99,27 +120,31 @@ public class Conditions { // ДЗ, часть №1
         // - Если t <= 15 и t > -5, то вывести «Нормально»
         // - Если t <= 5, то вывести «Холодно»
         int t = 19;
+        String condition;
         if (t > 15) {
-            System.out.println("Тепло");
-        } else if (t <= 15 && t > -5) {
-            System.out.println("Нормально");
-        } else if (t <= -5) {
-            System.out.println("Холодно");
+            condition = "Тепло";
+        } else if (t > -5) {
+            condition = "Нормально";
+        } else {
+            condition = "Холодно";
         }
+        System.out.println(condition);
         System.out.println();
 
         // Задача 4. По введенному (можно задать явно) номеру определить цвет радуги (1 – красный, 4 – зеленый и т.д.)
         int numberColor = 5;
+        String color;
         switch (numberColor) {
-            case 1 -> System.out.println("Красный");   // Программа подсказала упрощенный вариант записи кода
-            case 2 -> System.out.println("Оранжевый");
-            case 3 -> System.out.println("Желтый");
-            case 4 -> System.out.println("Зеленый");
-            case 5 -> System.out.println("Голубой");
-            case 6 -> System.out.println("Синий");
-            case 7 -> System.out.println("Фиолетовый");
-            default -> System.out.println("У радуги только семь явных цветов");
+            case 1 -> color = "Красный";   // Программа подсказала упрощенный вариант записи кода
+            case 2 -> color = "Оранжевый";
+            case 3 -> color = "Желтый";
+            case 4 -> color = "Зеленый";
+            case 5 -> color = "Голубой";
+            case 6 -> color = "Синий";
+            case 7 -> color = "Фиолетовый";
+            default -> color = "У радуги только семь явных цветов";
         }
+        System.out.println(color);
         System.out.println();
 
     }
